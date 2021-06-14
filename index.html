@@ -12,13 +12,45 @@
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
+        #header-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0px;
+            right: 0px;
+            height: 60px;
+            width: 100%;
+            /* background-color: aquamarine; */
+            font: 13px arial;
+            color: #000;
+        }
+
+        #header-left-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 30px;
+            width: auto;
+            padding-left: 30px;
+            /* background-color: orange; */
+        }
+
+        #header-right-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 30px;
+            width: auto;
+            padding-right: 30px;
+            /* background-color: orange; */
+        }
+
         #logo-strip {
-            /* display: block; */
             font-size: 13px;
             height: 228px;
-            margin-top: 89px;
+            margin-top: 29px;
             text-align: -webkit-center;
-            width: 980px;
+            width: 100%;
         }
 
         #search-strip {
@@ -48,6 +80,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .header-item {
+            margin-right: 20px;
+            opacity: 0.75;
+        }
+
+        .sign-in {
+            padding: 0 12px;
+            border: 1px solid #4285f4;
+            border-radius: 2px;
+            background-color: #4285f4;
+            color: #fff;
+            font-weight: bold;
+            line-height: 28px;
+            opacity: 1;
         }
 
         .buttons {
@@ -90,6 +138,11 @@
             border-color: rgba(223, 225, 229, 0);
         }
 
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
         input {
             cursor: text;
             width: 387px;
@@ -110,27 +163,45 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <center>
-        <div id="logo-strip">
-            <img src="Images/google_logo.png" alt="Google Logo" width="272" height="92" style="padding-top:109px">
-        </div>
-        <div id="search-strip">
-            <div class="search-border">
-                <div id="searchicon-box">
-                    <span class="material-icons" style="color: #9AA0A6; font-size: 20px;">search</span>
-                    
+    <header>
+        <nav>
+            <div id="header-strip">
+                <div id="header-left-box">
+                    <div class="header-item"><a>About</a></div>
+                    <div class="header-item"><a>Store</a></div>
                 </div>
-                <input type="text">
-                <div id="speechicon-box">
-                    <img src="https://web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" width="24" height="24">
+                <div id="header-right-box">
+                    <div class="header-item"><a>Gmail</a></div>
+                    <div class="header-item"><a>Images</a></div>
+                    <div class="header-item"><a><span class="material-icons" style="opacity: 0.75; vertical-align: middle;">apps</span></a></div>
+                    <div class="sign-in" style="opacity: 1">Sign In</div>
                 </div>
             </div>
-        </div>
-        <div id="buttons-strip">
-            <div class="buttons">Google Search</div>
-            <div class="buttons">I'm Feeling Lucky</div>
-        </div>
-    </center>
+        </nav>
+    </header>
+    <main>
+        <center>
+            <div id="logo-strip">
+                <img src="Images/google_logo.png" alt="Google Logo" width="272" height="92" style="padding-top:109px">
+            </div>
+            <div id="search-strip">
+                <div class="search-border">
+                    <div id="searchicon-box">
+                        <span class="material-icons" style="color: #9AA0A6; font-size: 20px;">search</span>
+                    </div>
+                    <input type="text">
+                    <div id="speechicon-box">
+                        <img src="https://web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png"
+                            width="24" height="24">
+                    </div>
+                </div>
+            </div>
+            <div id="buttons-strip">
+                <div class="buttons">Google Search</div>
+                <div class="buttons">I'm Feeling Lucky</div>
+            </div>
+        </center>
+    </main>
 </body>
 
 </html>
